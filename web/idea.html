@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet"  href = "css/bootstrap.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="css/bootstrap-responsive.min.css" rel="stylesheet"> -->
+    
+    <link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.min.css">   <!-- อันนี้สำคัญ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+    <title>JapaneseGarden</title>
+  </head>
+
+<body>
+  <div id='cssmenu'>
+      <ul>
+         <li><a href='#HOME'><span>HOME</span></a></li>
+         <li class='active has-sub'><a href='idea.html'><span>IDEA</span></a>
+            <ul>
+               <li class='has-sub'><a href='#' onclick="Tsu();"><span>สวนเนินเขา (Tsukiyama)</span></a></li>
+               <li class='has-sub'><a href='#' onclick="Kar();"><span>สวนเซน (Karesansui)</span></a></li>
+               <li class='has-sub'><a href='#' onclick="Cha();"><span>สวนน้ำชา (Chaniwa)</span></a></li>
+            </ul>
+         </li>
+         <li><a href='index.html'><span>DESIGN GARDEN</span></a></li>
+         <li><a href='#HOWTOUSE'><span>HOW TO USE</span></a></li>
+         <li><a href='tools.html'><span>TOOLS</span></a></li>
+         <li><a href='about.html'><span>ABOUT</span></a></li>
+      </ul>
+    </div>
+    
+    
+    <script>
+                    function Tsu(){
+                        var pic1 = document.getElementById("pic1"); 
+                            document.getElementById("text1").innerHTML = "<p><strong><u>สวนเนินเขา (Tsukiyama)</strong></u> – เดิมญี่ปุ่นได้รับอิทธิพลจากเกาหลีเป็นการจัดสวนที่จำลอง <br> \n\
+                                                                         แบบธรรมชาติและพัฒนาปรับปรุงให้เป็นรูปแบบ &nbsp โดยผสมผสานกับวิธีทางชีวิตมนุษย์  <br> \n\
+                                                                         ยึดแก่นทางด้านปรัชญา องค์ประกอบของสวนเนินเขาประกอบด้วย &nbsp ภูเขาจำลอง &nbsp น้ำตก <br>\n\
+                                                                         ลำธาร &nbsp ชายหาด &nbsp สระน้ำ &nbsp เกาะแก่ง และน้ำพุ&nbsp พืชพรรณที่มีรูปทรงสวยงามตามธรรมชาติ  <br> \n\
+                                                                         มีการทิ้งหิน หรือ บางครั้งก็มีการตัดควบคุมทรง &nbsp ใช้หินธรรมชาติเป็นองค์ประกอบของ<br> \n\
+                                                                         การจัดตามก้นของลำธาร &nbsp นอกจากนี้ยังมีองค์ประกอบอื่นๆ เช่น &nbsp สะพานหิน &nbsp ตะเกียงหิน <br>\n\
+                                                                         และสนามหญ้า</p>";
+
+                         pic1.src="pic/idea/เนินเขา3.jpg"; 
+                         pic1.style.display="initial";
+                        document.getElementById("text1").style.bottom="30%";
+                    }
+                    function Kar(){
+                        var pic1 = document.getElementById("pic1");
+                        document.getElementById("text1").innerHTML = "<p> <strong><u>สวนเซน (Karesansui)</strong></u> – หรือสวนแห้ง สวนหิน &nbsp ได้รับอิทธิพลมาจากจีน เป็นการจัดสวน <br>\n\
+                                                                            ตามหลักศาสนาพุทธนิกายลัทธิเซน &nbsp การจัดสวนแบบเซนนี้มุ่งเน้นจินตนาการและ <br> \n\
+                                                                            การสร้างสรรค์ความคิด แบ่งได้เป็น 2 &nbsp แบบย่อยคือ <br> \n\
+                                                                            <strong>1) สวนที่ปราศจากต้นไม้เป็นองค์ประกอบ</strong>  <br> \n\
+                                                                            &nbsp&nbsp&nbsp องค์ประกอบหลักของการจัดสวนนี้ คือ การจัดกลุ่มหิน &nbsp เพื่อจินตนาการเป็นภาพแก่ง การล่องเรือ หรืออื่นๆ\n\
+                                                                            การจัดหินนิยมจัดเป็นนัยแห่งความคิด (Idea Symbolism)<br> \n\
+                                                                            เช่น &nbsp การใช้หินรูปร่างคล้ายเรือ\n\
+                                                                            จัดอยู่กลางกรวดหรือทรายโรย แล้ววาดหรือกวาดทราย (Sand Pattern)&nbsp จินตนาการว่าทรายนั้นเป็นท้องทะเล ลำธาร ธารน้ำไหล \n\
+                                                                            การจัดสวนแบบนี้ให้ความละเอียดอ่อน เกิดความคิด และจินตนาการอันเกิดจากการผสมผสานของหินที่เป็นของแข็ง &nbsp แต่ทำให้เกิดความอ่อนช้อยมีลีลา\n\
+                                                                            โดยการวาดลวดลายของกรวด &nbsp อันเป็นตัวนำไปสู่ห้วงความคิด &nbsp เกิดความรู้สึกเงียบ และละเอียดอ่อน <br> \n\
+                                                                           <strong> 2) สวนที่มีต้นไม้เป็นองค์ประกอบ</strong> <br> \n\
+                                                                            &nbsp&nbsp&nbsp องค์ประกอบการจัดจะประกอบไปด้วยกลุ่มหิน &nbsp ต้นไม้ที่มีรูปทรงตามธรรมชาติ &nbsp ขึ้นตามซอกหินหรือทราย \n\
+                                                                            มีการวาดลาย เพื่อให้เกิดจินตนาการสวนแบบเซน</p>";
+                         pic1.src="pic/idea/zen.jpg"; 
+                         pic1.style.display="initial";
+                         document.getElementById("text1").style.bottom="50%";
+                    }
+                    function Cha(){
+                        var pic1 = document.getElementById("pic1");
+                        document.getElementById("text1").innerHTML = "<p> <strong><u>สวนน้ำชา (Chaniwa) </strong></u>–  เอกลักษณ์โดดเด่นอีกสิ่งหนึ่งของสวนญี่ปุ่น &nbsp นั้นก็คือ &nbsp สวนน้ำชา\n\
+                                                                            จะมีความเกี่ยวเนื่องกับพิธีชงชา &nbsp โดยในคริสต์ศตวรรษที่ &nbsp 16 &nbsp ได้มีการแยกห้องชงชา <br> \n\
+                                                                            ออกจากตัวบ้านมาไว้ในสวนน้ำชา\n\
+                                                                            จึงเป็นสวนที่อยู่ติดกับห้องพิธีชงชา &nbsp รูปแบบของสวนน้ำชา จะมีความถ่อมตัว &nbsp มีความเรียบง่าย และเป็นธรรมชาติ\n\
+                                                                            สวนน้ำชามีแนวคิดที่ลึกซึ้ง ในการจัดระเบียบของจิตวิญญาณเพื่อทำตัวให้กลมกลืนกับธรรมชาติ \n\
+                                                                            การออกแบบพื้นที่ของสวนชา &nbsp 60 &nbsp เปอร์เซ็นต์ของพื้นที่เพื่อการใช้ประโยชน์ อีก &nbsp 40 &nbsp เปอร์เซ็นต์สำหรับคุณค่าด้านสุนทรีย์ \n\
+                                                                            องค์ประกอบที่สำคัญที่สุดของการจัดมี &nbsp อ่างน้ำหิน &nbsp ตะเกียงหิน &nbsp ท่อน้ำไม้ไผ่ &nbsp เพื่อให้น้ำหยด และทำให้เกิดเสียง </p>";
+                        pic1.src="pic/idea/สวนน้ำชา2.jpg";
+                        pic1.style.display="initial";
+                        document.getElementById("text1").style.bottom="30%";
+                        
+                    }
+                </script>
+  <!-- <ul class="menu">
+      <li class="menu-item"><a href="index.html">HOME</a></li>
+      <li class="menu-item"><a href="#">IDEA</a></li>
+      <li class="menu-item"><a href="#">DESIGN GARDEN</a></li>
+      <li class="menu-item"><a href="#">HOW TO USE</a></li>
+      <li class="menu-item"><a href="tools.html">TOOLS</a></li>
+      <li class="menu-item"><a href="#">ABOUT US</a></li>
+  </ul> -->
+
+
+        <img class="pic-field" id="pic1" src=""><br>
+        <span class="text-field" id="text1"></span>
+  </body>
+</html>

@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<html>
+ <link href="css/bootstrap.min.css" rel="stylesheet">
+    <head>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+        <title>JapaneseGarden</title>
+        <meta charset="UTF-8">
+        <style>
+            .menu{
+                margin: -8px;
+                height: 50px;
+                background: black;
+            }
+            .content{
+                height: 80%;
+                margin: -8px;
+                padding: 20px;
+                background: white;
+            }
+            nav ul{
+                padding: 0;
+                margin: 0;
+            }
+            nav ul li{
+                display: inline;
+                margin: -2px;
+            }
+            .btn{
+                display: inline-table;
+                table-layout: fixed;
+                text-decoration: none;
+                height: 25px;
+                width: 16%;
+                background: black;
+                padding: 12px 0 5px 0;
+                text-align: center;
+                color: white;
+                font-weight: bold;
+            }
+            .btn:hover{
+                background: green;
+            }
+            .btn:focus{
+                background-color: green;
+            }
+            .btn2{
+                display: inline-table;
+                table-layout: fixed;
+                text-decoration: none;
+                height: 25px;
+                width: 15%;
+                background: black;
+                padding: 12px 0 5px 15px;
+                color: white;
+                font-weight: bold;
+            }
+            .btn2:hover{
+                background: green;
+            }
+            #showlist{
+                position: absolute;
+                z-index: 1;
+                display: none;
+            }
+            #showlist ul{
+                margin-top: 0;
+                padding-left: 0;
+            }
+            #showlist ul li{
+                list-style: none;
+            }
+            #listStyle{
+                position: absolute;
+                top: 170px;
+                left: 280px;
+                z-index: 1;
+                display: none;
+            }
+            #listStyle ul{
+                margin-left: -55px;
+                margin-top: -40px;
+            }
+            #listStyle ul li{
+                list-style: none;
+            }
+            #planchoose{
+                position: absolute;
+                background-color: black;
+                margin-left: -10px;
+                top: 105px;
+                left: 250px;
+                z-index: 6;
+                display: none;
+            }
+            #planchoose ul{
+                background-color: black;
+                margin-right: 20px;
+                margin-left: 0;
+                height: 20%;
+            }
+            #planchoose ul li{
+                padding: 3px;
+                display: inline-table;
+                list-style: none;
+            }
+            #planchoose ul li:hover{
+                background-color: green;
+            }
+            .maincontain{
+                text-align: center;
+            }
+            #rotateL{
+                z-index: 3;
+                margin: -80px 20px;
+                display: none;
+            }
+            #rotateR{
+                z-index: 3;
+                margin: -80px 20px;
+                display: none;
+            }
+            #okmanageplan{
+                position: absolute;
+                bottom: 50px;
+                left: 49%;
+                z-index: 3;
+                display: none;
+            }
+            #plan{
+                position: relative;
+                z-index: 2;
+                margin: 40px auto;
+                background-image: url(pic/home1_new1.png);
+                background-repeat: no-repeat;
+                display: none;
+                -webkit-background-size: 100% 100%;
+                -moz-background-size: 100% 100%;
+                -o-background-size: 100% 100%;
+                background-size: 100% 100%;
+            }
+            .blocks{
+                height: 1cm;
+                display: table;
+            }
+            #b1{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b2{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b3{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b4{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b5{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b6{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b7{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b8{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b9{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b10{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b11{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b12{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b13{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b14{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b15{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b16{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b17{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b18{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b19{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b20{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b21{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b22{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b23{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b24{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b25{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b26{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b27{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b28{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b29{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b30{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b31{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b32{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b33{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b34{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b35{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b36{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b37{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b38{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b39{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b40{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b41{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b42{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b43{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b44{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b45{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b46{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b47{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b48{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b49{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b50{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b51{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b52{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b53{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b54{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b55{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b56{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b57{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b58{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b59{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b60{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b61{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b62{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b63{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b64{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b65{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b66{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b67{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b68{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b69{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b70{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b71{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b72{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b73{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b74{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b75{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b76{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b77{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b78{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b79{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b80{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b81{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b82{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b83{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b84{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b85{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b86{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b87{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b88{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b89{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b90{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b91{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b92{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b93{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b94{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b95{
+                width: 1cm;
+                display:table-cell;
+            }
+            #b96{
+                width: 1cm;
+                display:table-cell;
+            }
+            #okplan{
+                position: absolute;
+                right: 400px;
+                bottom: 100px;
+                display: none;
+            }
+        </style>
+        <script>
+            var move = 0; 
+            var planb = [];
+            for(var i = 1;i<97;i++){
+                planb[i] = false;
+            }
+            function showList() {
+                var show = document.getElementById("showlist");
+                var style = document.getElementById("listStyle");
+                var listplan = document.getElementById("planchoose");
+                if (show.style.display === "block"){
+                    show.style.display = "none";
+                    style.style.display = "none";
+                    listplan.style.display = "none";
+                }
+                else
+                    show.style.display = "block";
+            }
+            function showStyle() {
+                var style = document.getElementById("listStyle");
+                if (style.style.display === "block")
+                    style.style.display = "none";
+                else
+                    style.style.display = "block";
+            }
+            function showPlan() {
+                var listplan = document.getElementById("planchoose");
+                if (listplan.style.display === "block")
+                    listplan.style.display = "none";
+                else
+                    listplan.style.display = "block";
+            }
+            function choosePlan(picture){
+                var listplan = document.getElementById("planchoose");
+                var rotateR = document.getElementById("rotateR");
+                var rotateL = document.getElementById("rotateL");
+                var ok = document.getElementById("okmanageplan");
+                var planC = document.getElementById("plan");
+                var okbutton = document.getElementById("okplan");
+                planC.style.display = "table";
+                listplan.style.display = "none";
+                rotateR.style.display = "initial";
+                rotateL.style.display = "initial";
+                ok.style.display = "initial";
+                okbutton.style.display = "none";
+                move = 0;
+                planC.style.webkitTransform = "rotate(0deg)";
+                planC.style.mozTransform    = "rotate(0deg)";
+                planC.style.msTransform     = "rotate(0deg)"; 
+                planC.style.oTransform      = "rotate(0deg)"; 
+                planC.style.transform       = "rotate(0deg)";
+                for(var i = 1;i<97;i++){
+                    var setdefault = document.getElementById("b"+i);
+                    planb[i] = false;
+                    setdefault.style.backgroundColor = "initial";
+                }
+            }
+            function hideManage(){
+                var rotateR = document.getElementById("rotateR");
+                var rotateL = document.getElementById("rotateL");
+                var ok = document.getElementById("okmanageplan");
+                rotateR.style.display = "none";
+                rotateL.style.display = "none";
+                ok.style.display = "none";
+            }
+            function right(){
+                var div = document.getElementById("plan");
+                move=(move-90)%360;
+                div.style.webkitTransform = "rotate("+move+"deg)";
+                div.style.mozTransform    = "rotate("+move+"deg)";
+                div.style.msTransform     = "rotate("+move+"deg)"; 
+                div.style.oTransform      = "rotate("+move+"deg)"; 
+                div.style.transform       = "rotate("+move+"deg)"; 
+            }
+            function left(){
+                var pic = document.getElementById("plan");
+                move=(move+90)%360;
+                pic.style.webkitTransform = "rotate("+move+"deg)";
+                pic.style.mozTransform    = "rotate("+move+"deg)";
+                pic.style.msTransform     = "rotate("+move+"deg)"; 
+                pic.style.oTransform      = "rotate("+move+"deg)"; 
+                pic.style.transform       = "rotate("+move+"deg)"; 
+            }
+            function managePic(){
+                hideManage();
+                var plan = document.getElementById("plan");
+                if(plan.style.display === "table"){
+                    var okbutton = document.getElementById("okplan");
+                    okbutton.style.display = "initial";
+                }
+                for(var i = 1;i<97;i++){
+                    if(planb[i]===false){
+                        var setwhite = document.getElementById("b"+i);
+                        setwhite.style.backgroundColor = "initial";
+                    }
+                }
+                
+            }
+            function overb(block){
+                var ok = document.getElementById("okplan");
+                var over = document.getElementById(block.id);
+                var blocks = over.id;
+                var cal = blocks.substring(1);
+                var calcu = parseInt(cal);
+                if(ok.style.display === "initial" && !planb[calcu]){
+                    over.style.backgroundColor = "rgba(255, 255, 255, 0.3)";
+                }
+            }
+            function outb(block){
+                var ok = document.getElementById("okplan");
+                var out = document.getElementById(block.id);
+                var blocks = out.id;
+                var cal = blocks.substring(1);
+                var calcu = parseInt(cal);
+                if(ok.style.display === "initial" && !planb[calcu]){
+                    out.style.backgroundColor = "initial";
+                }
+            }
+            function clickb(block){
+                var ok = document.getElementById("okplan");
+                var clicked = document.getElementById(block.id);
+                var blocks = clicked.id;
+                var cal = blocks.substring(1);
+                var calcu = parseInt(cal);
+                if(ok.style.display === "initial"){
+                    if(!planb[calcu]){
+                        clicked.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
+                    }
+                    else{
+                        clicked.style.backgroundColor = "initial";
+                    }
+                    planb[calcu]=!planb[calcu];
+                }
+            }
+            function hideokplan(){
+                var ok = document.getElementById("okplan");
+                ok.style.display = "none";
+                for(var i = 1;i<97;i++){
+                    if(planb[i]===false){
+                        var setwhite = document.getElementById("b"+i);
+                        setwhite.style.backgroundColor = "white";
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href=#home class="btn"> HOME </a></li>
+                    <li><a href=#idea class="btn"> IDEA </a></li>
+                    <li><a href=#design class="btn"> DESIGN GARDEN </a></li>
+                    <li><a href=#howtouse class="btn"> HOW TO USE </a></li>
+                    <li><a href=#tools class="btn"> TOOLS </a></li>
+                    <li><a href=#aboutus class="btn"> ABOUT US </a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
+            <img src="listButton.gif" alt="showList" width="40" height="40" onclick="showList()">
+            <div id="showlist">
+                <ul>
+                    <li><a href=#แบบแปลนบ้าน class="btn2" onclick="showPlan();"> แบบแปลนบ้าน </a></li>
+                    <li><a href=#ส่วนที่ต้องการจัดสวน class="btn2" onclick="managePic();"> ส่วนที่ต้องการจัดสวน</a></li>
+                    <li><a href=#ขนาดที่ต้องการจัดสวน class="btn2"> ขนาดที่ต้องการจัดสวน </a></li>
+                    <li><a href=#สไตล์ของสวนที่ต้องการ class="btn2" onclick="showStyle();">สไตล์ของสวนที่ต้องการ </a></li>
+                    <li><a href=#เครื่องมือที่ใช้จัดสวน class="btn2"> เครื่องมือที่ใช้จัดสวน </a></li>
+                    <li><a href=#จัดสวน class="btn2"> จัดสวน </a></li>
+                    <li><a href=#แสดงแบบ3มิติ class="btn2"> แสดงแบบ 3 มิติ </a></li>
+                </ul>
+            <div id="listStyle">
+                <ul>
+                    <li><a href=#สวนเนินเขา class="btn2"> สวนเนินเขา </a></li>
+                    <li><a href=#สวนเนินเขา class="btn2"> สวนเซน </a></li>
+                    <li><a href=#สวนเนินเขา class="btn2"> สวนน้ำชา </a></li>
+                </ul>
+            </div>
+            </div>
+            <div id="planchoose">
+                <ul>
+                    <li><img src="pic/home1.png" alt="1ai" width="200" onclick="choosePlan(this);"></li>
+                    <li><img src="pic/home2.png" alt="2ai" width="200" onclick="choosePlan(this);"></li>
+                    <li><img src="pic/home3.png" alt="3ai" width="200" onclick="choosePlan(this);"></li>
+                    <li><img src="pic/home4.png" alt="4ai" width="200" onclick="choosePlan(this);"></li>
+                    <li><img src="pic/home5.png" alt="5ai" width="200" onclick="choosePlan(this);"></li>
+                </ul>
+            </div>
+            <div class="maincontain">
+                <div id="plan">
+                    <div class="blocks">
+                        <div id="b1" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b2" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b3" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b4" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b5" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b6" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b7" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b8" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b9" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b10" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b11" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b12" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                    </div>
+                    <div class="blocks">
+                        <div id="b13" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b14" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b15" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b16" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b17" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b18" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b19" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b20" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b21" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b22" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b23" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b24" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                    </div>
+                    <div class="blocks">
+                        <div id="b25" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b26" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b27" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b28" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b29"></div>
+                        <div id="b30"></div>
+                        <div id="b31"></div>
+                        <div id="b32"></div>
+                        <div id="b33" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b34" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b35" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b36" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                    </div>
+                    <div class="blocks">
+                        <div id="b37" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b38" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b39" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b40" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b41"></div>
+                        <div id="b42"></div>
+                        <div id="b43"></div>
+                        <div id="b44"></div>
+                        <div id="b45" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b46" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b47" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b48" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                    </div>
+                    <div class="blocks">
+                        <div id="b49" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b50" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b51" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b52" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b53"></div>
+                        <div id="b54"></div>
+                        <div id="b55"></div>
+                        <div id="b56"></div>
+                        <div id="b57" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b58" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b59" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b60" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                    </div>
+                    <div class="blocks">
+                        <div id="b61" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b62" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b63" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b64" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b65"></div>
+                        <div id="b66"></div>
+                        <div id="b67"></div>
+                        <div id="b68"></div>
+                        <div id="b69" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b70" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b71" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b72" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                    </div>
+                    <div class="blocks">
+                        <div id="b73" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b74" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b75" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b76" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b77" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b78" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b79" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b80" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b81" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b82" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b83" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b84" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                    </div>
+                    <div class="blocks">
+                        <div id="b85" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b86" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b87" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b88" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b89" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b90" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b91" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b92" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b93" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b94" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b95" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                        <div id="b96" onmouseover="overb(this);" onmouseout="outb(this);" onclick="clickb(this);"></div>
+                    </div>
+                </div>
+                <button id="okplan" type="button" onclick="hideokplan();">OK</button>
+                <br>
+
+                <img id="rotateR" src="rotate1_gray.png" onmouseover="this.src='rotate1_black.png';"
+                onmouseout="this.src='rotate1_gray.png';" width="50"  alt="moveright" onclick="right();">
+
+                <button id="okmanageplan" type="button" onclick="hideManage();">OK</button>
+
+                <img id="rotateL" src="rotate2_gray.png" onmouseover="this.src='rotate2_black.png';"
+                onmouseout="this.src='rotate2_gray.png';" width="50" alt="moveleft" onclick="left();">
+            </div>
+        </div>
+    </body>    
+</html>
