@@ -1,1 +1,1 @@
-# finalProject2016
+# Final Project 2016 (Bachelor's Degree)
